@@ -1,0 +1,25 @@
+{
+  "name": "camera-movement",
+  "version": "1.0.0",
+  "description": "> Create an interactive 3D scene using JavaScript and the Three.js library.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vquynh/camera-movement.git"
+  },
+  "author": "Quynh Nguyen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vquynh/camera-movement/issues"
+  },
+  "homepage": "https://github.com/vquynh/camera-movement#readme",
+  "dependencies": {
+    "three": "^0.170.0"
+  },
+  "devDependencies": {
+    "vite": "^5.4.11"
+  }
+}
