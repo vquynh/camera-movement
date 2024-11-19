@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kamerabewegung</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            font-family: 'Roboto', Arial, sans-serif; 
+            font-size: 18px; 
+        }
+        #header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 22px; 
+            font-weight: 700;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        #info, #depthControl, #instructions { z-index: 10; }
+        #instructions {
+            position: absolute;
+            top: 150px;
+            right: 10px;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            width: 250px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        #references {
+            position: absolute;
+            bottom: 50px;
+            right: 10px;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 8px;
+            width: auto;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <script type="importmap">
+        {
+          "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@<version>/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@<version>/examples/jsm/"
+          }
+        }
+    </script>
+  <script type="module" crossorigin src="/assets/index-D2J-hubW.js"></script>
+</head>
+<body>
+    <!-- Header Section -->
+    <div id="header">
+        Graphical Visualisation Technologies (WS2024)<br>
+        Einsendeaufgabe 5 - Kamerabewegung<br>
+        von Quynh Nguyen
+    </div>
+    <!-- Instructions Section -->
+    <div id="instructions">
+        <h3>Anleitung</h3>
+        <ul>
+            <li>Nutzen Sie die <strong>Pfeiltaste Links</strong> und <strong>Pfeiltaste Rechts</strong>, um die Kamera um die Szene zu bewegen.</li>
+            <li>Drücken Sie <strong>N</strong>, um den Radius der Kamera zu verkleinern (näher).</li>
+            <li>Drücken Sie <strong>Shift + N</strong>, um den Radius der Kamera zu vergrößern (weiter entfernt).</li>
+            <li>Nutzen Sie die <strong>+</strong> und <strong>-</strong> Schaltfläche, um die Rekursionstiefe der Kugel anzupassen.</li>
+        </ul>
+        <button id="increase">Rekursionstiefe erhöhen (+)</button>
+        <button id="decrease">Rekursionstiefe verringern (-)</button>
+    </div>
+
+    <!-- References Section -->
+    <div id="references">
+        <h4>Quelle</h4>
+        <p>
+            Anleitung zur Erstellung eines Icosphere-Meshs: 
+            <a href="http://blog.andreaskahler.com/2009/06/creating-icosphere-mesh-in-code.html" target="_blank">
+                Blog von Andreas Kahler
+            </a>
+        </p>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+</body>
+</html>
